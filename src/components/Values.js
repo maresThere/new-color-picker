@@ -1,17 +1,18 @@
 import React, { Component } from 'react'
+import store from '../store'
 
 class Values extends Component {
   render () {
     if (this.props.alpha < 1) {
       return <div>
         <div className='valueHolder'>
-          <span>{`hsla (${this.props.hue}, ${this.props.saturation}%, ${this.props.light}%, ${this.props.alpha})`}</span>
+          <span>{store.color}</span>
         </div>
       </div>
     } else {
       return <div>
         <div className='valueHolder'>
-          <span>{`hsl(${this.props.hue}, ${this.props.saturation}%, ${this.props.light}%)`}</span>
+          <span>{store.color}</span>
         </div>
       </div>
     }
